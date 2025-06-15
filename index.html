@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Capacity & Velocity Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Team Capacity & Velocity Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#capacity">Capacity Planning</a></li>
+                <li><a href="#velocity">Velocity Tracking</a></li>
+                <li><a href="#team">Team Members</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="capacity">
+            <h2>Capacity Planning</h2>
+            <form>
+                <fieldset>
+                    <legend>Team Member Availability</legend>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Team Member</th>
+                                <th>Week 1</th>
+                                <th>Week 2</th>
+                                <th>Week 3</th>
+                                <th>Week 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="member1" placeholder="Name"></td>
+                                <td><input type="number" name="member1_week1" min="0" max="5" placeholder="0-5"></td>
+                                <td><input type="number" name="member1_week2" min="0" max="5" placeholder="0-5"></td>
+                                <td><input type="number" name="member1_week3" min="0" max="5" placeholder="0-5"></td>
+                                <td><input type="number" name="member1_week4" min="0" max="5" placeholder="0-5"></td>
+                            </tr>
+                            <!-- More rows can be added -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total Capacity</th>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button type="button">Add Team Member</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="velocity">
+            <h2>Velocity Tracking</h2>
+            <form>
+                <fieldset>
+                    <legend>Sprint Data</legend>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Sprint</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Planned Points</th>
+                                <th>Completed Points</th>
+                                <th>Velocity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="sprint1" placeholder="Sprint 1"></td>
+                                <td><input type="date" name="start1"></td>
+                                <td><input type="date" name="end1"></td>
+                                <td><input type="number" name="planned1" min="0"></td>
+                                <td><input type="number" name="completed1" min="0"></td>
+                                <td>0</td>
+                            </tr>
+                            <!-- More rows can be added -->
+                        </tbody>
+                    </table>
+                    <button type="button">Add Sprint</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="team">
+            <h2>Team Members</h2>
+            <form>
+                <fieldset>
+                    <legend>Team Composition</legend>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Capacity (days/week)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="name1" placeholder="Full Name"></td>
+                                <td>
+                                    <select name="role1">
+                                        <option value="dev">Developer</option>
+                                        <option value="qa">QA</option>
+                                        <option value="ba">Business Analyst</option>
+                                        <option value="pm">Project Manager</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="capacity1" min="1" max="5" value="5"></td>
+                            </tr>
+                            <!-- More rows can be added -->
+                        </tbody>
+                    </table>
+                    <button type="button">Add Team Member</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Simple Team Capacity & Velocity Tracker - HTML Version</p>
+    </footer>
+</body>
+</html>
